@@ -29,6 +29,16 @@ namespace IdeiaProj1
             txtreserva.Text = string.Empty;
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvoltar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        
