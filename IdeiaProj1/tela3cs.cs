@@ -29,13 +29,6 @@ namespace IdeiaProj1
             txtreserva.Text = string.Empty;
 
         }
-
-       
-
-        private void tela3cs_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
        
