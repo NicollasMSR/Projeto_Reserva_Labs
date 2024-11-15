@@ -37,7 +37,10 @@ namespace IdeiaProj1
 
         private void btnvoltar_Click(object sender, EventArgs e)
         {
-
+            Tela2 tela2 = new Tela2();
+            this.Hide();
+            tela2.ShowDialog();
+            this.Dispose();
         }
     }
 
