@@ -46,9 +46,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(96)))), ((int)(((byte)(146)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(681, 54);
+            this.panel1.Size = new System.Drawing.Size(681, 53);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -63,7 +63,6 @@
             this.label1.Size = new System.Drawing.Size(191, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "ControlResv";
-           
             // 
             // label2
             // 
@@ -76,12 +75,11 @@
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Código Etec:";
-           
             // 
             // txtcodigoetec
             // 
             this.txtcodigoetec.Location = new System.Drawing.Point(332, 121);
-            this.txtcodigoetec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcodigoetec.Margin = new System.Windows.Forms.Padding(2);
             this.txtcodigoetec.Name = "txtcodigoetec";
             this.txtcodigoetec.Size = new System.Drawing.Size(73, 20);
             this.txtcodigoetec.TabIndex = 2;
@@ -89,7 +87,7 @@
             // txtnome
             // 
             this.txtnome.Location = new System.Drawing.Point(302, 153);
-            this.txtnome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnome.Margin = new System.Windows.Forms.Padding(2);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(186, 20);
             this.txtnome.TabIndex = 3;
@@ -97,7 +95,7 @@
             // txtsenha
             // 
             this.txtsenha.Location = new System.Drawing.Point(302, 186);
-            this.txtsenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(156, 20);
             this.txtsenha.TabIndex = 4;
@@ -132,7 +130,7 @@
             this.btnentrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnentrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.btnentrar.Location = new System.Drawing.Point(305, 235);
-            this.btnentrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnentrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(53, 23);
             this.btnentrar.TabIndex = 7;
@@ -168,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Professor";
