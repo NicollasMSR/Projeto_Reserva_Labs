@@ -56,5 +56,173 @@ namespace IdeiaProj1
         {
             listaGrid();
         }
+
+        private void btnLab1_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 1 (Aquário)'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnLab2_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 2'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnLab3_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 3'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnLabquimica_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO DE QUÍMICA'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnSalamaker_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'SALA MAKER'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnSiberia_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'SIBÉRIA'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnAuditorio_Click(object sender, EventArgs e)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            string strSQL = "select * from reserva WHERE local_reserva = 'AUDITÓRIO'";
+            MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
+
+
+            Conexao.Open();
+
+            try
+            {
+                DataTable dtLista = new DataTable();
+                MySqlDataAdapter objAdp = new MySqlDataAdapter(comando);
+                objAdp.Fill(dtLista);
+
+                dataGrid.DataSource = dtLista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
     }
 }

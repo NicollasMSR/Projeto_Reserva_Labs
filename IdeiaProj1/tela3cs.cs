@@ -74,35 +74,76 @@ namespace IdeiaProj1
                 string data_source = "datasource=localhost; username=root; database=reservas_labs";
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_incial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioIncial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
-
+                string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
-                comando.Parameters.AddWithValue("@localReserva", txtlocal.Text);
-                comando.Parameters.AddWithValue("@dataReserva", txtdata.Text);
-                comando.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
-                comando.Parameters.AddWithValue("@horarioIncial", txthora1.Text);
+                comando.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
                 comando.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
-                comando.Parameters.AddWithValue("@curso", txtcurso.Text);
-                comando.Parameters.AddWithValue("@ano", txtano.Text); 
-                comando.Parameters.AddWithValue("@profResp", txtprof.Text);
-                comando.Parameters.AddWithValue("@reservaFixa", txtfixa.Text);
-
+                comando.Parameters.AddWithValue("@dataReserva", txtdata.Text);
 
                 Conexao.Open();
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Dados inseridos com sucesso!");
+
+                DataTable dataTable = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                da.Fill(dataTable);
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    MessageBox.Show("Reserva ja feita", "Erro de duplicidade de reserva", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    try
+                    {
+                        Conexao = new MySqlConnection(data_source);
+
+                        string sqlinsert = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_incial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioIncial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
+
+                        MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
+                        comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
+                        comandoinsert.Parameters.AddWithValue("@dataReserva", txtdata.Text);
+                        comandoinsert.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
+                        comandoinsert.Parameters.AddWithValue("@horarioIncial", txthora1.Text);
+                        comandoinsert.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
+                        comandoinsert.Parameters.AddWithValue("@curso", txtcurso.Text);
+                        comandoinsert.Parameters.AddWithValue("@ano", txtano.Text);
+                        comandoinsert.Parameters.AddWithValue("@profResp", txtprof.Text);
+                        comandoinsert.Parameters.AddWithValue("@reservaFixa", txtfixa.Text);
+
+
+                        Conexao.Open();
+                        comandoinsert.ExecuteNonQuery();
+                        MessageBox.Show("Dados inseridos com sucesso!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao conectar: " + ex.Message);
+                    }
+                    finally
+                    {
+                        if (Conexao.State == ConnectionState.Open)
+                        {
+                            Conexao.Close();
+                        }
+                    }
+
+                }
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao conectar: " + ex.Message);
             }
-            finally
+            finally 
             {
                 if (Conexao.State == ConnectionState.Open)
                 {
                     Conexao.Close();
                 }
+
             }
+          
+           
         }
 
         private void tela3_Load(object sender, EventArgs e)
