@@ -53,14 +53,14 @@
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 62;
             this.dataGrid.RowTemplate.Height = 28;
-            this.dataGrid.Size = new System.Drawing.Size(1512, 539);
+            this.dataGrid.Size = new System.Drawing.Size(1256, 493);
             this.dataGrid.TabIndex = 0;
             // 
             // btnadd
             // 
-            this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.Color.Black;
-            this.btnadd.Location = new System.Drawing.Point(11, 631);
+            this.btnadd.Location = new System.Drawing.Point(14, 619);
             this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(193, 28);
@@ -72,29 +72,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(648, 29);
+            this.label1.Location = new System.Drawing.Point(519, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 37);
+            this.label1.Size = new System.Drawing.Size(296, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "RESERVAS FEITAS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 678);
+            this.label2.Location = new System.Drawing.Point(16, 671);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 29);
+            this.label2.Size = new System.Drawing.Size(177, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Pesquisar reservas em: ";
             // 
             // btnLab1
             // 
-            this.btnLab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLab1.Location = new System.Drawing.Point(290, 676);
+            this.btnLab1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLab1.Location = new System.Drawing.Point(212, 666);
             this.btnLab1.Name = "btnLab1";
             this.btnLab1.Size = new System.Drawing.Size(88, 30);
             this.btnLab1.TabIndex = 5;
@@ -104,8 +105,8 @@
             // 
             // btnLab2
             // 
-            this.btnLab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLab2.Location = new System.Drawing.Point(384, 678);
+            this.btnLab2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLab2.Location = new System.Drawing.Point(319, 667);
             this.btnLab2.Name = "btnLab2";
             this.btnLab2.Size = new System.Drawing.Size(98, 29);
             this.btnLab2.TabIndex = 6;
@@ -115,8 +116,8 @@
             // 
             // btnLab3
             // 
-            this.btnLab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLab3.Location = new System.Drawing.Point(488, 677);
+            this.btnLab3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLab3.Location = new System.Drawing.Point(436, 667);
             this.btnLab3.Name = "btnLab3";
             this.btnLab3.Size = new System.Drawing.Size(104, 29);
             this.btnLab3.TabIndex = 7;
@@ -126,8 +127,8 @@
             // 
             // btnLabquimica
             // 
-            this.btnLabquimica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLabquimica.Location = new System.Drawing.Point(598, 677);
+            this.btnLabquimica.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLabquimica.Location = new System.Drawing.Point(559, 666);
             this.btnLabquimica.Name = "btnLabquimica";
             this.btnLabquimica.Size = new System.Drawing.Size(154, 30);
             this.btnLabquimica.TabIndex = 8;
@@ -137,8 +138,8 @@
             // 
             // btnSalamaker
             // 
-            this.btnSalamaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalamaker.Location = new System.Drawing.Point(758, 679);
+            this.btnSalamaker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalamaker.Location = new System.Drawing.Point(732, 667);
             this.btnSalamaker.Name = "btnSalamaker";
             this.btnSalamaker.Size = new System.Drawing.Size(169, 29);
             this.btnSalamaker.TabIndex = 9;
@@ -148,8 +149,8 @@
             // 
             // btnSiberia
             // 
-            this.btnSiberia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiberia.Location = new System.Drawing.Point(933, 679);
+            this.btnSiberia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiberia.Location = new System.Drawing.Point(920, 667);
             this.btnSiberia.Name = "btnSiberia";
             this.btnSiberia.Size = new System.Drawing.Size(110, 29);
             this.btnSiberia.TabIndex = 10;
@@ -169,8 +170,8 @@
             // 
             // btnAuditorio
             // 
-            this.btnAuditorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAuditorio.Location = new System.Drawing.Point(1049, 679);
+            this.btnAuditorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditorio.Location = new System.Drawing.Point(1049, 667);
             this.btnAuditorio.Name = "btnAuditorio";
             this.btnAuditorio.Size = new System.Drawing.Size(134, 29);
             this.btnAuditorio.TabIndex = 12;
@@ -183,7 +184,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1531, 781);
+            this.ClientSize = new System.Drawing.Size(1275, 729);
             this.Controls.Add(this.btnAuditorio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSiberia);

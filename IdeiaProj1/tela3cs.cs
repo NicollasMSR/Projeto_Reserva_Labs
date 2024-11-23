@@ -5,20 +5,39 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace IdeiaProj1
 {
     public partial class tela3 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+            int nleft
+            , int ntop
+            , int nright
+            , int nbottom
+            , int nwidthellipise
+            , int nheightellipise
+            );
         public tela3()
         {
             InitializeComponent();
         }
 
+        private void tela3_Load(object sender,EventArgs e)
+        {
+            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,btnlimpar.Width,btnlimpar.Height,30,30));
+            btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 30, 30));
+            btnvoltar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 30, 30));
+
+        }
         private void btnlimpar_Click(object sender, EventArgs e)
         {
             txtano.Text = string.Empty;
@@ -147,6 +166,96 @@ namespace IdeiaProj1
         }
 
         private void tela3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSemana_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtlocal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthora1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtcurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtano_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtprof_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthora2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
