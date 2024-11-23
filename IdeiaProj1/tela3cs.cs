@@ -31,9 +31,9 @@ namespace IdeiaProj1
             InitializeComponent();
         }
 
-        private void tela3_Load(object sender,EventArgs e)
+        private void tela3_Load(object sender, EventArgs e)
         {
-            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0,0,btnlimpar.Width,btnlimpar.Height,30,30));
+            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnlimpar.Width, btnlimpar.Height, 30, 30));
             btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 30, 30));
             btnvoltar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 30, 30));
 
@@ -63,7 +63,7 @@ namespace IdeiaProj1
 
         private void txtfixa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(txtfixa.Text == "SIM")
+            if (txtfixa.Text == "SIM")
             {
                 txtSemana.Visible = true;
                 label13.Visible = true;
@@ -93,7 +93,7 @@ namespace IdeiaProj1
                 string data_source = "datasource=localhost; username=root; database=reservas_labs";
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
+                string sql = "SELECT * from reserva WHERE horario_incial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
                 comando.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
                 comando.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
@@ -107,7 +107,7 @@ namespace IdeiaProj1
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    MessageBox.Show("Reserva ja feita", "Erro de duplicidade de reserva", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Reserva ja feita por outro professor, troque o horario ou o dia da reserva", "Erro de duplicidade de reserva", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace IdeiaProj1
 
                         Conexao.Open();
                         comandoinsert.ExecuteNonQuery();
-                        MessageBox.Show("Dados inseridos com sucesso!");
+                        MessageBox.Show("Reserva feita com sucesso!","ALERTA", MessageBoxButtons.OK);
                     }
                     catch (Exception ex)
                     {
@@ -153,7 +153,7 @@ namespace IdeiaProj1
             {
                 MessageBox.Show("Erro ao conectar: " + ex.Message);
             }
-            finally 
+            finally
             {
                 if (Conexao.State == ConnectionState.Open)
                 {
@@ -161,105 +161,9 @@ namespace IdeiaProj1
                 }
 
             }
-          
-           
-        }
 
-        private void tela3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSemana_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtlocal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txthora1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txtcurso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtano_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtprof_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txthora2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
 
         }
     }
-
        
 }

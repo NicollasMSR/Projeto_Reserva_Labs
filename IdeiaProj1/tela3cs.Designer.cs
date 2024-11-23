@@ -80,7 +80,6 @@
             this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "LOCAL:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -93,7 +92,6 @@
             this.label3.Size = new System.Drawing.Size(111, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "HORARIO:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -106,7 +104,6 @@
             this.label4.Size = new System.Drawing.Size(90, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "CURSO:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -119,7 +116,6 @@
             this.label5.Size = new System.Drawing.Size(59, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "ANO:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -134,19 +130,17 @@
             this.label6.Text = "PROFESSOR:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label6.UseMnemonic = false;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txthora1
             // 
             this.txthora1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthora1.Location = new System.Drawing.Point(681, 335);
+            this.txthora1.Location = new System.Drawing.Point(593, 338);
             this.txthora1.Margin = new System.Windows.Forms.Padding(2);
             this.txthora1.Mask = "00:00";
             this.txthora1.Name = "txthora1";
-            this.txthora1.Size = new System.Drawing.Size(58, 22);
+            this.txthora1.Size = new System.Drawing.Size(53, 22);
             this.txthora1.TabIndex = 9;
             this.txthora1.ValidatingType = typeof(System.DateTime);
-            this.txthora1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txthora1_MaskInputRejected);
             // 
             // label7
             // 
@@ -159,7 +153,6 @@
             this.label7.Size = new System.Drawing.Size(45, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Das";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -176,14 +169,13 @@
             // txthora2
             // 
             this.txthora2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthora2.Location = new System.Drawing.Point(592, 335);
+            this.txthora2.Location = new System.Drawing.Point(685, 338);
             this.txthora2.Margin = new System.Windows.Forms.Padding(2);
             this.txthora2.Mask = "00:00";
             this.txthora2.Name = "txthora2";
             this.txthora2.Size = new System.Drawing.Size(58, 22);
             this.txthora2.TabIndex = 12;
             this.txthora2.ValidatingType = typeof(System.DateTime);
-            this.txthora2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txthora2_MaskInputRejected);
             // 
             // txtcurso
             // 
@@ -201,7 +193,6 @@
             this.txtcurso.Name = "txtcurso";
             this.txtcurso.Size = new System.Drawing.Size(251, 24);
             this.txtcurso.TabIndex = 13;
-            this.txtcurso.SelectedIndexChanged += new System.EventHandler(this.txtcurso_SelectedIndexChanged);
             // 
             // txtlocal
             // 
@@ -220,7 +211,6 @@
             this.txtlocal.Name = "txtlocal";
             this.txtlocal.Size = new System.Drawing.Size(283, 24);
             this.txtlocal.TabIndex = 14;
-            this.txtlocal.SelectedIndexChanged += new System.EventHandler(this.txtlocal_SelectedIndexChanged);
             // 
             // txtano
             // 
@@ -235,7 +225,6 @@
             this.txtano.Name = "txtano";
             this.txtano.Size = new System.Drawing.Size(127, 24);
             this.txtano.TabIndex = 15;
-            this.txtano.SelectedIndexChanged += new System.EventHandler(this.txtano_SelectedIndexChanged);
             // 
             // txtprof
             // 
@@ -245,7 +234,6 @@
             this.txtprof.Name = "txtprof";
             this.txtprof.Size = new System.Drawing.Size(286, 23);
             this.txtprof.TabIndex = 16;
-            this.txtprof.TextChanged += new System.EventHandler(this.txtprof_TextChanged);
             // 
             // btnreserva
             // 
@@ -274,7 +262,6 @@
             this.label9.Size = new System.Drawing.Size(65, 24);
             this.label9.TabIndex = 18;
             this.label9.Text = "DATA:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtdata
             // 
@@ -298,7 +285,6 @@
             this.label10.Size = new System.Drawing.Size(163, 24);
             this.label10.TabIndex = 20;
             this.label10.Text = "RESERVA FIXA:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtfixa
             // 
@@ -364,7 +350,6 @@
             this.label11.Size = new System.Drawing.Size(120, 14);
             this.label11.TabIndex = 25;
             this.label11.Text = "(NOME E SOBRENOME)";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -376,7 +361,6 @@
             this.label12.Size = new System.Drawing.Size(255, 14);
             this.label12.TabIndex = 26;
             this.label12.Text = "(SÃO RESERVAS QUE OCORREM TODA SEMANA) ";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -387,7 +371,6 @@
             this.label13.Size = new System.Drawing.Size(173, 24);
             this.label13.TabIndex = 27;
             this.label13.Text = "DIA DA SEMANA:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtSemana
             // 
@@ -403,7 +386,6 @@
             this.txtSemana.Name = "txtSemana";
             this.txtSemana.Size = new System.Drawing.Size(164, 24);
             this.txtSemana.TabIndex = 28;
-            this.txtSemana.SelectedIndexChanged += new System.EventHandler(this.txtSemana_SelectedIndexChanged);
             // 
             // tela3
             // 
@@ -441,7 +423,6 @@
             this.Name = "tela3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RESERVA";
-            this.Load += new System.EventHandler(this.tela3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

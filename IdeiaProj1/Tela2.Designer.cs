@@ -53,14 +53,14 @@
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 62;
             this.dataGrid.RowTemplate.Height = 28;
-            this.dataGrid.Size = new System.Drawing.Size(1256, 493);
+            this.dataGrid.Size = new System.Drawing.Size(1256, 439);
             this.dataGrid.TabIndex = 0;
             // 
             // btnadd
             // 
             this.btnadd.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.Color.Black;
-            this.btnadd.Location = new System.Drawing.Point(14, 619);
+            this.btnadd.Location = new System.Drawing.Point(8, 573);
             this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(193, 28);
