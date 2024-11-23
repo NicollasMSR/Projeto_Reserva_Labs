@@ -46,18 +46,18 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(96)))), ((int)(((byte)(146)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(-4, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1297, 66);
+            this.panel2.Size = new System.Drawing.Size(1530, 81);
             this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(574, 10);
+            this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(556, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 37);
+            this.label1.Size = new System.Drawing.Size(178, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
             // 
@@ -66,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(520, 124);
+            this.label2.Location = new System.Drawing.Point(501, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 24);
             this.label2.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(520, 161);
+            this.label3.Location = new System.Drawing.Point(501, 313);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 24);
             this.label3.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(520, 210);
+            this.label4.Location = new System.Drawing.Point(501, 367);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 24);
             this.label4.TabIndex = 3;
@@ -96,41 +96,44 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(600, 127);
+            this.txtNome.Location = new System.Drawing.Point(581, 272);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(214, 20);
             this.txtNome.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(600, 166);
+            this.txtEmail.Location = new System.Drawing.Point(581, 317);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(214, 20);
             this.txtEmail.TabIndex = 5;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(600, 214);
+            this.txtSenha.Location = new System.Drawing.Point(588, 371);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(214, 20);
+            this.txtSenha.Size = new System.Drawing.Size(207, 20);
             this.txtSenha.TabIndex = 6;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(600, 273);
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(598, 498);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(94, 28);
+            this.btnCadastrar.Size = new System.Drawing.Size(94, 30);
             this.btnCadastrar.TabIndex = 7;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(524, 189);
+            this.label5.Location = new System.Drawing.Point(505, 340);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 13);
             this.label5.TabIndex = 8;
@@ -141,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1290, 472);
+            this.ClientSize = new System.Drawing.Size(1275, 729);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
@@ -153,6 +156,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.Cadastro_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

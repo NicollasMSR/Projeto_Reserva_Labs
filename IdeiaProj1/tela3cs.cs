@@ -33,9 +33,9 @@ namespace IdeiaProj1
 
         private void tela3_Load(object sender, EventArgs e)
         {
-            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnlimpar.Width, btnlimpar.Height, 30, 30));
-            btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 30, 30));
-            btnvoltar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 30, 30));
+            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnlimpar.Width, btnlimpar.Height, 10, 10));
+            btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 10, 10));
+            btnvoltar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 10, 10));
 
         }
         private void btnlimpar_Click(object sender, EventArgs e)

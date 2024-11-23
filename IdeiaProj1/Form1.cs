@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,16 @@ namespace IdeiaProj1
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+            int nleft
+            , int ntop
+            , int nright
+            , int nbottom
+            , int nwidthellipise
+            , int nheightellipise
+            );
         public Form1()
         {
             InitializeComponent();
@@ -72,6 +83,20 @@ namespace IdeiaProj1
             this.Hide();
             cadastro.ShowDialog();
             this.Dispose();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btnentrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnentrar.Width, btnentrar.Height, 10, 10));
+            btnCadastro.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastro.Width, btnCadastro.Height, 10, 10));
+
+
+
         }
     }
 }
