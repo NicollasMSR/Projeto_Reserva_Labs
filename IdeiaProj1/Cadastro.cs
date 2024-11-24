@@ -43,10 +43,6 @@ namespace IdeiaProj1
             {
                 MessageBox.Show("Por Favor insira uma senha", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtSenha01 != txtSenha)
-            {
-                MessageBox.Show("Senhas não correspondem, verifique-as", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
             else
             {
                 MySqlConnection Conexao = null;
