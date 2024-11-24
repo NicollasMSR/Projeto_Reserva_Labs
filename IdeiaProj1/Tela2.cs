@@ -71,13 +71,15 @@ namespace IdeiaProj1
         {
             listaGrid();
 
-            btnadd.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnadd.Width, btnadd.Height, 10, 10 ));
-            btnLab1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab1.Width, btnLab1.Height, 10, 10));
-            btnLab2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab2.Width, btnLab2.Height, 10, 10));
-            btnLab3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab3.Width, btnLab3.Height, 10,10));
-            btnLabquimica.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLabquimica.Width, btnLabquimica.Height, 10, 10));
-            btnSalamaker.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSalamaker.Width, btnSalamaker.Height, 10, 10));
-            btnSiberia.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSiberia.Width, btnSiberia.Height, 10, 10));
+            btnadd.Region =                      Region.FromHrgn(CreateRoundRectRgn(0, 0, btnadd.Width, btnadd.Height, 5, 5));
+            btnExcluir.Region =              Region.FromHrgn(CreateRoundRectRgn(0, 0, btnadd.Width, btnExcluir.Height, 5, 5));
+            btnEditar.Region =                Region.FromHrgn(CreateRoundRectRgn(0, 0, btnEditar.Width, btnadd.Height, 5, 5));
+            btnLab1.Region =                   Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab1.Width, btnLab1.Height, 5, 5));
+            btnLab2.Region =                   Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab2.Width, btnLab2.Height, 5, 5));
+            btnLab3.Region =                   Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLab3.Width, btnLab3.Height, 5, 5));
+            btnLabquimica.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLabquimica.Width, btnLabquimica.Height, 5, 5));
+            btnSalamaker.Region =    Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSalamaker.Width, btnSalamaker.Height, 5, 5));
+            btnSiberia.Region =          Region.FromHrgn(CreateRoundRectRgn(0, 0, btnSiberia.Width, btnSiberia.Height, 5, 5));
         }
 
         private void btnLab1_Click(object sender, EventArgs e)
@@ -305,6 +307,11 @@ namespace IdeiaProj1
             this.Hide();
             editar.ShowDialog();
             this.Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

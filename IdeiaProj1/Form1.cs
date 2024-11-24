@@ -92,8 +92,8 @@ namespace IdeiaProj1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnentrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnentrar.Width, btnentrar.Height, 10, 10));
-            btnCadastro.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastro.Width, btnCadastro.Height, 10, 10));
+            btnentrar.Region =       Region.FromHrgn(CreateRoundRectRgn(0, 0, btnentrar.Width, btnentrar.Height, 5, 5));
+            btnCadastro.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastro.Width, btnCadastro.Height, 5, 5));
 
 
 

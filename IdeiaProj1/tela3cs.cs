@@ -33,9 +33,9 @@ namespace IdeiaProj1
 
         private void tela3_Load(object sender, EventArgs e)
         {
-            btnlimpar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnlimpar.Width, btnlimpar.Height, 10, 10));
-            btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 10, 10));
-            btnvoltar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 10, 10));
+            btnlimpar.Region   =  Region.FromHrgn(CreateRoundRectRgn(0, 0, btnlimpar.Width, btnlimpar.Height, 5, 5));
+            btnreserva.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnreserva.Width, btnreserva.Height, 5, 5));
+            btnvoltar.Region   =  Region.FromHrgn(CreateRoundRectRgn(0, 0, btnvoltar.Width, btnvoltar.Height, 5, 5));
 
         }
         private void btnlimpar_Click(object sender, EventArgs e)
@@ -88,10 +88,6 @@ namespace IdeiaProj1
         private void btnreserva_Click(object sender, EventArgs e)
         {
             MySqlConnection Conexao = null;
-            if (txtid.Text == null)
-            {
-                MessageBox.Show("Por Favor insira um id numerico","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
             if (txtlocal.Text == null)
             {
                 MessageBox.Show("Por Favor insira um local", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -150,7 +146,6 @@ namespace IdeiaProj1
                         string sqlinsert = "INSERT INTO reserva(id, local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@id, @localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
 
                         MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
-                        comandoinsert.Parameters.AddWithValue("@id", txtid.Text);
                         comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
                         comandoinsert.Parameters.AddWithValue("@dataReserva", txtdata.Text);
                         comandoinsert.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
@@ -199,6 +194,61 @@ namespace IdeiaProj1
 
             }
 
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtano_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSemana_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

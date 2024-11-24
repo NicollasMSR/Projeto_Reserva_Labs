@@ -121,8 +121,8 @@ namespace IdeiaProj1
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
-            btnCadastrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastrar.Width, btnCadastrar.Height, 10, 10));
-          
+            btnCadastrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastrar.Width, btnCadastrar.Height, 5, 5));
+            btnvoltar.Region    = Region.FromHrgn (CreateRoundRectRgn(  0,  0, btnvoltar.Width,  btnvoltar.Height,  5, 5));
 
         }
 
