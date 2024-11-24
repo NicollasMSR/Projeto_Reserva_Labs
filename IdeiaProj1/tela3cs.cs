@@ -88,6 +88,38 @@ namespace IdeiaProj1
         private void btnreserva_Click(object sender, EventArgs e)
         {
             MySqlConnection Conexao = null;
+            if (txtid.Text == null)
+            {
+                MessageBox.Show("Por Favor insira um id numerico","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtlocal.Text == null)
+            {
+                MessageBox.Show("Por Favor insira um local", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtfixa.Text == null)
+            {
+                MessageBox.Show("Por Favor insira se a reserva é fixa ou não", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txthora1.Text == null)
+            {
+                MessageBox.Show("Por Favor insira a hora de incio da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txthora2.Text == null)
+            {
+                MessageBox.Show("Por Favor insira a hora de termino da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtcurso.Text == null)
+            {
+                MessageBox.Show("Por Favor insira o curso da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtano.Text == null)
+            {
+                MessageBox.Show("Por Favor insira o ano da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtprof.Text == null)
+            {
+                MessageBox.Show("Por Favor insira o nome do professor responsavel pelo laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             try
             {
                 string data_source = "datasource=localhost; username=root; database=reservas_labs";
@@ -132,7 +164,7 @@ namespace IdeiaProj1
 
                         Conexao.Open();
                         comandoinsert.ExecuteNonQuery();
-                        MessageBox.Show("Reserva feita com sucesso!","ALERTA", MessageBoxButtons.OK);
+                        MessageBox.Show("Reserva feita com sucesso!","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -144,9 +176,9 @@ namespace IdeiaProj1
                         {
                             Conexao.Close();
                             Tela2 tela2 = new Tela2();
-            this.Hide();
-            tela2.ShowDialog();
-            this.Dispose();
+                            this.Hide();
+                            tela2.ShowDialog();
+                            this.Dispose();
                         }
                     }
 

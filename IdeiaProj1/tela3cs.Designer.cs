@@ -135,12 +135,12 @@
             // 
             // txthora1
             // 
-            this.txthora1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthora1.Location = new System.Drawing.Point(586, 338);
+            this.txthora1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthora1.Location = new System.Drawing.Point(586, 332);
             this.txthora1.Margin = new System.Windows.Forms.Padding(2);
             this.txthora1.Mask = "00:00";
             this.txthora1.Name = "txthora1";
-            this.txthora1.Size = new System.Drawing.Size(53, 22);
+            this.txthora1.Size = new System.Drawing.Size(53, 26);
             this.txthora1.TabIndex = 9;
             this.txthora1.ValidatingType = typeof(System.DateTime);
             // 
@@ -170,18 +170,18 @@
             // 
             // txthora2
             // 
-            this.txthora2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthora2.Location = new System.Drawing.Point(678, 338);
+            this.txthora2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthora2.Location = new System.Drawing.Point(678, 332);
             this.txthora2.Margin = new System.Windows.Forms.Padding(2);
             this.txthora2.Mask = "00:00";
             this.txthora2.Name = "txthora2";
-            this.txthora2.Size = new System.Drawing.Size(58, 22);
+            this.txthora2.Size = new System.Drawing.Size(58, 26);
             this.txthora2.TabIndex = 12;
             this.txthora2.ValidatingType = typeof(System.DateTime);
             // 
             // txtcurso
             // 
-            this.txtcurso.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtcurso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcurso.FormattingEnabled = true;
             this.txtcurso.Items.AddRange(new object[] {
             "MEIO AMBIENTE",
@@ -193,12 +193,12 @@
             this.txtcurso.Location = new System.Drawing.Point(521, 374);
             this.txtcurso.Margin = new System.Windows.Forms.Padding(2);
             this.txtcurso.Name = "txtcurso";
-            this.txtcurso.Size = new System.Drawing.Size(251, 24);
+            this.txtcurso.Size = new System.Drawing.Size(251, 26);
             this.txtcurso.TabIndex = 13;
             // 
             // txtlocal
             // 
-            this.txtlocal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlocal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlocal.FormattingEnabled = true;
             this.txtlocal.Items.AddRange(new object[] {
             "LABORATÓRIO 1 (Aquário)",
@@ -211,12 +211,12 @@
             this.txtlocal.Location = new System.Drawing.Point(517, 179);
             this.txtlocal.Margin = new System.Windows.Forms.Padding(2);
             this.txtlocal.Name = "txtlocal";
-            this.txtlocal.Size = new System.Drawing.Size(283, 24);
+            this.txtlocal.Size = new System.Drawing.Size(283, 26);
             this.txtlocal.TabIndex = 14;
             // 
             // txtano
             // 
-            this.txtano.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtano.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtano.FormattingEnabled = true;
             this.txtano.Items.AddRange(new object[] {
             "1° PRIMEIRO ",
@@ -225,16 +225,16 @@
             this.txtano.Location = new System.Drawing.Point(492, 413);
             this.txtano.Margin = new System.Windows.Forms.Padding(2);
             this.txtano.Name = "txtano";
-            this.txtano.Size = new System.Drawing.Size(127, 24);
+            this.txtano.Size = new System.Drawing.Size(127, 26);
             this.txtano.TabIndex = 15;
             // 
             // txtprof
             // 
-            this.txtprof.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtprof.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprof.Location = new System.Drawing.Point(580, 451);
             this.txtprof.Margin = new System.Windows.Forms.Padding(2);
             this.txtprof.Name = "txtprof";
-            this.txtprof.Size = new System.Drawing.Size(286, 23);
+            this.txtprof.Size = new System.Drawing.Size(286, 26);
             this.txtprof.TabIndex = 16;
             // 
             // btnreserva
@@ -267,11 +267,11 @@
             // 
             // txtdata
             // 
-            this.txtdata.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdata.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdata.Location = new System.Drawing.Point(500, 257);
             this.txtdata.Mask = "00/00/0000";
             this.txtdata.Name = "txtdata";
-            this.txtdata.Size = new System.Drawing.Size(102, 22);
+            this.txtdata.Size = new System.Drawing.Size(102, 26);
             this.txtdata.TabIndex = 19;
             this.txtdata.ValidatingType = typeof(System.DateTime);
             this.txtdata.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtdata_MaskInputRejected);
@@ -290,14 +290,14 @@
             // 
             // txtfixa
             // 
-            this.txtfixa.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfixa.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfixa.FormattingEnabled = true;
             this.txtfixa.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
             this.txtfixa.Location = new System.Drawing.Point(597, 219);
             this.txtfixa.Name = "txtfixa";
-            this.txtfixa.Size = new System.Drawing.Size(96, 24);
+            this.txtfixa.Size = new System.Drawing.Size(96, 28);
             this.txtfixa.TabIndex = 21;
             this.txtfixa.SelectedIndexChanged += new System.EventHandler(this.txtfixa_SelectedIndexChanged);
             // 
@@ -345,22 +345,22 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(430, 476);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 14);
+            this.label11.Size = new System.Drawing.Size(141, 15);
             this.label11.TabIndex = 25;
             this.label11.Text = "(NOME E SOBRENOME)";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(699, 229);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(255, 14);
+            this.label12.Size = new System.Drawing.Size(287, 15);
             this.label12.TabIndex = 26;
             this.label12.Text = "(SÃO RESERVAS QUE OCORREM TODA SEMANA) ";
             // 
@@ -376,7 +376,7 @@
             // 
             // txtSemana
             // 
-            this.txtSemana.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtSemana.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSemana.FormattingEnabled = true;
             this.txtSemana.Items.AddRange(new object[] {
             "TODA SEGUNDA-FEIRA",
@@ -386,7 +386,7 @@
             "TODA SEXTA-FEIRA"});
             this.txtSemana.Location = new System.Drawing.Point(608, 296);
             this.txtSemana.Name = "txtSemana";
-            this.txtSemana.Size = new System.Drawing.Size(164, 24);
+            this.txtSemana.Size = new System.Drawing.Size(164, 26);
             this.txtSemana.TabIndex = 28;
             // 
             // label14
@@ -403,9 +403,10 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(472, 137);
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.Location = new System.Drawing.Point(471, 132);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(120, 20);
+            this.txtid.Size = new System.Drawing.Size(120, 26);
             this.txtid.TabIndex = 30;
             // 
             // tela3

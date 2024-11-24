@@ -31,6 +31,18 @@ namespace IdeiaProj1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtNome.Text == null)
+            {
+                MessageBox.Show("Por Favor insira o nome do usuario", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtEmail.Text == null)
+            {
+                MessageBox.Show("Por Favor insira o email do usuario","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtSenha.Text == null)
+            {
+                MessageBox.Show("Por Favor insira uma senha", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             MySqlConnection Conexao = null;
             try
             {
@@ -112,6 +124,14 @@ namespace IdeiaProj1
             btnCadastrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnCadastrar.Width, btnCadastrar.Height, 10, 10));
           
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Hide();
+            form1.ShowDialog();
+            this.Dispose();
         }
     }
 }

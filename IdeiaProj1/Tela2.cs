@@ -257,11 +257,46 @@ namespace IdeiaProj1
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Excluir excluir = new Excluir(EmailProf);
-            this.Hide();
-            excluir.ShowDialog();
-            this.Dispose();
+            if (dataGrid.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Por favor, selecione uma reserva para excluir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
 
+            }
+            int reservaId = (int)dataGrid.SelectedRows[0].Cells["id"].Value;
+            ExcluirReserva(reservaId);
+        }
+        private void ExcluirReserva(int reservaId)
+        {
+            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            Conexao = new MySqlConnection(data_source);
+            {
+                try
+                {
+                    Conexao.Open();
+                    string query = "DELETE FROM reserva WHERE id = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(query, Conexao))
+                    {
+                        cmd.Parameters.AddWithValue("@id", reservaId);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Reserva excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listaGrid(); 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao excluir reserva: " + ex.Message);
+                }
+                finally
+                {
+
+                    if (Conexao.State == ConnectionState.Open)
+                    {
+                        Conexao.Close();
+                    }
+                }
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

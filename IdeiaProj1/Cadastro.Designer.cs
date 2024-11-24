@@ -38,6 +38,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,23 +97,26 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(581, 272);
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(580, 265);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(214, 20);
+            this.txtNome.Size = new System.Drawing.Size(214, 29);
             this.txtNome.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(581, 317);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(580, 310);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(214, 20);
+            this.txtEmail.Size = new System.Drawing.Size(214, 29);
             this.txtEmail.TabIndex = 5;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(588, 371);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(587, 364);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(207, 20);
+            this.txtSenha.Size = new System.Drawing.Size(207, 29);
             this.txtSenha.TabIndex = 6;
             // 
             // btnCadastrar
@@ -121,7 +125,7 @@
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(598, 498);
+            this.btnCadastrar.Location = new System.Drawing.Point(665, 500);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(94, 30);
             this.btnCadastrar.TabIndex = 7;
@@ -139,12 +143,23 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "(EMAIL INSTITUCIONAL)";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(528, 501);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1275, 729);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtSenha);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }
