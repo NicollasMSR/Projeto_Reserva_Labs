@@ -39,8 +39,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnvoltar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSenha01 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,9 +114,9 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(670, 413);
+            this.txtSenha.Location = new System.Drawing.Point(574, 352);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(207, 24);
+            this.txtSenha.Size = new System.Drawing.Size(214, 24);
             this.txtSenha.TabIndex = 6;
             // 
             // btnCadastrar
@@ -160,33 +158,12 @@
             this.btnvoltar.UseVisualStyleBackColor = false;
             this.btnvoltar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label6.Location = new System.Drawing.Point(501, 412);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 24);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Confirme a senha:";
-            // 
-            // txtSenha01
-            // 
-            this.txtSenha01.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha01.Location = new System.Drawing.Point(578, 351);
-            this.txtSenha01.Name = "txtSenha01";
-            this.txtSenha01.Size = new System.Drawing.Size(210, 24);
-            this.txtSenha01.TabIndex = 11;
-            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1275, 729);
-            this.Controls.Add(this.txtSenha01);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnvoltar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
@@ -220,7 +197,5 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnvoltar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSenha01;
     }
 }
