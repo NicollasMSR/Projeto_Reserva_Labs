@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2024 às 19:59
+-- Tempo de geração: 24/11/2024 às 20:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -33,13 +33,6 @@ CREATE TABLE `login` (
   `senha` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `login`
---
-
-INSERT INTO `login` (`nome`, `email`, `senha`) VALUES
-('Nicollas Miguel', 'nicollas.reis@etec.sp.gov.br', '12345');
-
 -- --------------------------------------------------------
 
 --
@@ -60,13 +53,6 @@ CREATE TABLE `reserva` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `reserva`
---
-
-INSERT INTO `reserva` (`id`, `local_reserva`, `data_reserva`, `dia_semana`, `horario_inicial`, `horario_final`, `curso`, `ano`, `prof_resp`, `reserva_fixa`) VALUES
-(4, 'LABORATÓRIO 3 ', '26/11/2024', '', '09:50', '12:20', 'DESENVOLVIMENTO DE SISTEMAS ', '2° SEGUNDO', 'Alessandra', 'NÃO');
-
---
 -- Índices para tabelas despejadas
 --
 
@@ -84,7 +70,7 @@ ALTER TABLE `reserva`
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
