@@ -90,31 +90,31 @@ namespace IdeiaProj1
         private void btnreserva_Click(object sender, EventArgs e)
         {
             MySqlConnection Conexao = null;
-            if (txtlocal.Text == null)
+            if (txtlocal.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira um local", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-             else if (txtfixa.Text == null)
+             else if (txtfixa.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira se a reserva é fixa ou não", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txthora1.Text == null)
+            else if (txthora1.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira a hora de incio da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txthora2.Text == null)
+            else if (txthora2.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira a hora de termino da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtcurso.Text == null)
+            else if (txtcurso.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira o curso da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtano.Text == null)
+            else if (txtano.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira o ano da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtprof.Text == null)
+            else if (txtprof.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira o nome do professor responsavel pelo laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

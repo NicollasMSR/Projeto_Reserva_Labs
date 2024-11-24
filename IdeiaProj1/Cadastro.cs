@@ -31,15 +31,15 @@ namespace IdeiaProj1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == null)
+            if (txtNome.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira o nome do usuario", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtEmail.Text == null)
+            else if (txtEmail.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira o email do usuario","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (txtSenha.Text == null)
+            else if (txtSenha.Text.Length == 0)
             {
                 MessageBox.Show("Por Favor insira uma senha", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
