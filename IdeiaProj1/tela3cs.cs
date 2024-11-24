@@ -94,106 +94,109 @@ namespace IdeiaProj1
             {
                 MessageBox.Show("Por Favor insira um local", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txtfixa.Text == null)
+             else if (txtfixa.Text == null)
             {
                 MessageBox.Show("Por Favor insira se a reserva é fixa ou não", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txthora1.Text == null)
+            else if (txthora1.Text == null)
             {
                 MessageBox.Show("Por Favor insira a hora de incio da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txthora2.Text == null)
+            else if (txthora2.Text == null)
             {
                 MessageBox.Show("Por Favor insira a hora de termino da aula", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txtcurso.Text == null)
+            else if (txtcurso.Text == null)
             {
                 MessageBox.Show("Por Favor insira o curso da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txtano.Text == null)
+            else if (txtano.Text == null)
             {
                 MessageBox.Show("Por Favor insira o ano da sala que vai usar o laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            if (txtprof.Text == null)
+            else if (txtprof.Text == null)
             {
                 MessageBox.Show("Por Favor insira o nome do professor responsavel pelo laboratório", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            try
+            else
             {
-                string data_source = "datasource=localhost; username=root; database=reserva_labs";
-                Conexao = new MySqlConnection(data_source);
-
-                string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
-                comando.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
-                comando.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
-                comando.Parameters.AddWithValue("@dataReserva", txtdata.Text);
-
-                Conexao.Open();
-
-                DataTable dataTable = new DataTable();
-                MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                da.Fill(dataTable);
-
-                if (dataTable.Rows.Count > 0)
+                try
                 {
-                    MessageBox.Show("Reserva ja feita por outro professor, troque o horario ou o dia da reserva", "Erro de duplicidade de reserva", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    try
+                    string data_source = "datasource=localhost; username=root; database=reserva_labs";
+                    Conexao = new MySqlConnection(data_source);
+
+                    string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
+                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                    comando.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
+                    comando.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
+                    comando.Parameters.AddWithValue("@dataReserva", txtdata.Text);
+
+                    Conexao.Open();
+
+                    DataTable dataTable = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter(comando);
+                    da.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
                     {
-                        Conexao = new MySqlConnection(data_source);
-
-                        string sqlinsert = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
-
-                        MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
-                        comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
-                        comandoinsert.Parameters.AddWithValue("@dataReserva", txtdata.Text);
-                        comandoinsert.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
-                        comandoinsert.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
-                        comandoinsert.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
-                        comandoinsert.Parameters.AddWithValue("@curso", txtcurso.Text);
-                        comandoinsert.Parameters.AddWithValue("@ano", txtano.Text);
-                        comandoinsert.Parameters.AddWithValue("@profResp", txtprof.Text);
-                        comandoinsert.Parameters.AddWithValue("@reservaFixa", txtfixa.Text);
-
-
-                        Conexao.Open();
-                        comandoinsert.ExecuteNonQuery();
-                        MessageBox.Show("Reserva feita com sucesso!","ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Reserva ja feita por outro professor, troque o horario ou o dia da reserva", "Erro de duplicidade de reserva", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Erro ao conectar: " + ex.Message);
-                    }
-                    finally
-                    {
-                        if (Conexao.State == ConnectionState.Open)
+                        try
                         {
-                            Conexao.Close();
-                            Tela2 tela2 = new Tela2();
-                            this.Hide();
-                            tela2.ShowDialog();
-                            this.Dispose();
+                            Conexao = new MySqlConnection(data_source);
+
+                            string sqlinsert = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
+
+                            MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
+                            comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
+                            comandoinsert.Parameters.AddWithValue("@dataReserva", txtdata.Text);
+                            comandoinsert.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
+                            comandoinsert.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
+                            comandoinsert.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
+                            comandoinsert.Parameters.AddWithValue("@curso", txtcurso.Text);
+                            comandoinsert.Parameters.AddWithValue("@ano", txtano.Text);
+                            comandoinsert.Parameters.AddWithValue("@profResp", txtprof.Text);
+                            comandoinsert.Parameters.AddWithValue("@reservaFixa", txtfixa.Text);
+
+
+                            Conexao.Open();
+                            comandoinsert.ExecuteNonQuery();
+                            MessageBox.Show("Reserva feita com sucesso!", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erro ao conectar: " + ex.Message);
+                        }
+                        finally
+                        {
+                            if (Conexao.State == ConnectionState.Open)
+                            {
+                                Conexao.Close();
+                                Tela2 tela2 = new Tela2();
+                                this.Hide();
+                                tela2.ShowDialog();
+                                this.Dispose();
+                            }
+                        }
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao conectar: " + ex.Message);
+                }
+                finally
+                {
+                    if (Conexao.State == ConnectionState.Open)
+                    {
+                        Conexao.Close();
                     }
 
                 }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar: " + ex.Message);
-            }
-            finally
-            {
-                if (Conexao.State == ConnectionState.Open)
-                {
-                    Conexao.Close();
-                }
-
             }
 
 
