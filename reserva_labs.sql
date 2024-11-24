@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2024 às 18:43
+-- Tempo de geração: 24/11/2024 às 19:59
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `reservas_labs`
+-- Banco de dados: `reserva_labs`
 --
 
 -- --------------------------------------------------------
@@ -64,7 +64,7 @@ CREATE TABLE `reserva` (
 --
 
 INSERT INTO `reserva` (`id`, `local_reserva`, `data_reserva`, `dia_semana`, `horario_inicial`, `horario_final`, `curso`, `ano`, `prof_resp`, `reserva_fixa`) VALUES
-(3, 'LABORATÓRIO 2', '26/11/2024', '', '13:20', '15:00', 'MEIO AMBIENTE', '1° PRIMEIRO ', 'Aaaaaa Bbbbbb', 'NÃO');
+(4, 'LABORATÓRIO 3 ', '26/11/2024', '', '09:50', '12:20', 'DESENVOLVIMENTO DE SISTEMAS ', '2° SEGUNDO', 'Alessandra', 'NÃO');
 
 --
 -- Índices para tabelas despejadas
@@ -84,7 +84,7 @@ ALTER TABLE `reserva`
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
