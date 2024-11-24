@@ -16,6 +16,8 @@ namespace IdeiaProj1
 {
     public partial class tela3 : Form
     {
+        
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -118,7 +120,7 @@ namespace IdeiaProj1
             }
             try
             {
-                string data_source = "datasource=localhost; username=root; database=reservas_labs";
+                string data_source = "datasource=localhost; username=root; database=reserva_labs";
                 Conexao = new MySqlConnection(data_source);
 
                 string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
@@ -143,7 +145,7 @@ namespace IdeiaProj1
                     {
                         Conexao = new MySqlConnection(data_source);
 
-                        string sqlinsert = "INSERT INTO reserva(id, local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@id, @localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
+                        string sqlinsert = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
 
                         MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
                         comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
@@ -237,10 +239,7 @@ namespace IdeiaProj1
 
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtano_SelectedIndexChanged(object sender, EventArgs e)
         {

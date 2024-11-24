@@ -42,20 +42,20 @@
             // 
             // txtemail
             // 
-            this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemail.Location = new System.Drawing.Point(593, 326);
             this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(187, 29);
+            this.txtemail.Size = new System.Drawing.Size(187, 26);
             this.txtemail.TabIndex = 3;
             // 
             // txtsenha
             // 
-            this.txtsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsenha.Location = new System.Drawing.Point(593, 393);
             this.txtsenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtsenha.Name = "txtsenha";
-            this.txtsenha.Size = new System.Drawing.Size(187, 29);
+            this.txtsenha.Size = new System.Drawing.Size(187, 26);
             this.txtsenha.TabIndex = 4;
             // 
             // lblsenha

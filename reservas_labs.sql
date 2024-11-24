@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2024 às 01:58
+-- Tempo de geração: 24/11/2024 às 18:43
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `login` (
-  `nome` varchar(200) DEFAULT NULL,
-  `email` varchar(200) DEFAULT NULL,
-  `senha` varchar(100) DEFAULT NULL
+  `nome` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `senha` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -48,15 +48,15 @@ INSERT INTO `login` (`nome`, `email`, `senha`) VALUES
 
 CREATE TABLE `reserva` (
   `id` int(11) NOT NULL,
-  `local_reserva` varchar(50) DEFAULT NULL,
+  `local_reserva` varchar(30) NOT NULL,
   `data_reserva` varchar(10) DEFAULT NULL,
-  `dia_semana` varchar(50) DEFAULT NULL,
-  `horario_inicial` varchar(5) DEFAULT NULL,
-  `horario_final` varchar(5) DEFAULT NULL,
-  `curso` varchar(50) DEFAULT NULL,
-  `ano` varchar(20) DEFAULT NULL,
-  `prof_resp` varchar(100) DEFAULT NULL,
-  `reserva_fixa` varchar(3) DEFAULT NULL
+  `dia_semana` varchar(20) DEFAULT NULL,
+  `horario_inicial` varchar(5) NOT NULL,
+  `horario_final` varchar(5) NOT NULL,
+  `curso` varchar(50) NOT NULL,
+  `ano` varchar(20) NOT NULL,
+  `prof_resp` varchar(150) NOT NULL,
+  `reserva_fixa` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -64,13 +64,7 @@ CREATE TABLE `reserva` (
 --
 
 INSERT INTO `reserva` (`id`, `local_reserva`, `data_reserva`, `dia_semana`, `horario_inicial`, `horario_final`, `curso`, `ano`, `prof_resp`, `reserva_fixa`) VALUES
-(1, 'LABORATÓRIO 1 (Aquário)', '25/11/2024', '', '07:00', '08:40', 'MEIO AMBIENTE', '2° SEGUNDO', 'XXXXXX XXXXXX', 'NÃO'),
-(2, 'LABORATÓRIO 2', '  /  /', 'TODA TERÇA-FEIRA', '08:40', '12:20', 'DESENVOLVIMENTO DE SISTEMAS ', '3° TERCEIRO', 'XXXXXX XXXXXXX', 'SIM'),
-(3, 'LABORATÓRIO 3 ', '  /  /', 'TODA SEGUNDA-FEIRA', '09:50', '12:20', 'SECRETARIADO', '2° SEGUNDO', 'ZZZZZZZZ ZZZZZZ', 'SIM'),
-(4, 'LABORATÓRIO DE QUÍMICA ', '28/11/2024', '', '13:20', '15:00', 'DESENVOLVIMENTO DE SISTEMAS ', '2° SEGUNDO', 'ZZZZZZZ ZZZZZZZ', 'NÃO'),
-(5, 'SALA MAKER', '27/11/2024', '', '11:30', '12:20', 'SECRETARIADO', '1° PRIMEIRO ', 'YYYYYYY YYYYYY', 'NÃO'),
-(6, 'SIBÉRIA', '  /  /', 'TODA QUARTA-FEIRA', '15:00', '15:50', 'DESIGN DE INTERIORES', '1° PRIMEIRO ', 'YYYYYYY YYYYYY', 'SIM'),
-(7, 'AUDITÓRIO', '26/11/2024', '', '09:50', '12:20', 'HOSPEDAGEM', '3° TERCEIRO', 'AAAAAA  AAAAAA', 'NÃO');
+(3, 'LABORATÓRIO 2', '26/11/2024', '', '13:20', '15:00', 'MEIO AMBIENTE', '1° PRIMEIRO ', 'Aaaaaa Bbbbbb', 'NÃO');
 
 --
 -- Índices para tabelas despejadas
@@ -81,6 +75,16 @@ INSERT INTO `reserva` (`id`, `local_reserva`, `data_reserva`, `dia_semana`, `hor
 --
 ALTER TABLE `reserva`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `reserva`
+--
+ALTER TABLE `reserva`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

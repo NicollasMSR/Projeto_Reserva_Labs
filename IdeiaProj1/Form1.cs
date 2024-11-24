@@ -36,7 +36,7 @@ namespace IdeiaProj1
             MySqlConnection Conexao = null;
             try
             {
-                string data_source = "datasource=localhost; username=root; database=reservas_labs";
+                string data_source = "datasource=localhost; username=root; database=reserva_labs";
                 Conexao = new MySqlConnection(data_source);
 
                 string sql = "SELECT * from login WHERE email = @email AND senha = @senha;";
@@ -53,7 +53,7 @@ namespace IdeiaProj1
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    Tela2 tela2 = new Tela2(txtemail.Text);
+                    Tela2 tela2 = new Tela2();
                     this.Hide();
                     tela2.ShowDialog();
                     this.Dispose();

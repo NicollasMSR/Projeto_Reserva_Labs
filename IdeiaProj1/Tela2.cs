@@ -14,7 +14,7 @@ namespace IdeiaProj1
 {
     public partial class Tela2 : Form
     {
-        public string EmailProf { get; set; }   
+       
 
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -31,7 +31,7 @@ namespace IdeiaProj1
         MySqlConnection Conexao = null;
         public void listaGrid()
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -84,7 +84,7 @@ namespace IdeiaProj1
 
         private void btnLab1_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 1 (Aquário)'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -108,7 +108,7 @@ namespace IdeiaProj1
 
         private void btnLab2_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 2'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -132,7 +132,7 @@ namespace IdeiaProj1
 
         private void btnLab3_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO 3'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -156,7 +156,7 @@ namespace IdeiaProj1
 
         private void btnLabquimica_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'LABORATÓRIO DE QUÍMICA'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -180,7 +180,7 @@ namespace IdeiaProj1
 
         private void btnSalamaker_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'SALA MAKER'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -204,7 +204,7 @@ namespace IdeiaProj1
 
         private void btnSiberia_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'SIBÉRIA'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -228,7 +228,7 @@ namespace IdeiaProj1
 
         private void btnAuditorio_Click(object sender, EventArgs e)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             string strSQL = "select * from reserva WHERE local_reserva = 'AUDITÓRIO'";
             MySqlCommand comando = new MySqlCommand(strSQL, Conexao);
@@ -249,13 +249,7 @@ namespace IdeiaProj1
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-        public Tela2 (string emailProf)
-        {
-            InitializeComponent();
-            
-            EmailProf = emailProf; 
-
-        }
+        
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -270,7 +264,7 @@ namespace IdeiaProj1
         }
         private void ExcluirReserva(int reservaId)
         {
-            string data_source = "datasource=localhost; username=root; database=reservas_labs";
+            string data_source = "datasource=localhost; username=root; database=reserva_labs";
             Conexao = new MySqlConnection(data_source);
             {
                 try
@@ -303,12 +297,17 @@ namespace IdeiaProj1
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Editar editar = new Editar();
-            this.Hide();
-            editar.ShowDialog();
-            this.Dispose();
+            if (dataGrid.SelectedRows.Count == 0)
+            { MessageBox.Show("Por favor, selecione uma reserva para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             return;
+            }
+            int reservaId = (int)dataGrid.SelectedRows[0].Cells["id"].Value;
+            Editar editar = new Editar(reservaId); 
+            if (editar.ShowDialog() == DialogResult.OK)
+            {
+                listaGrid(); 
+            }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 

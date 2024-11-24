@@ -43,10 +43,14 @@ namespace IdeiaProj1
             {
                 MessageBox.Show("Por Favor insira uma senha", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            if (txtSenha01 != txtSenha)
+            {
+                MessageBox.Show("Senhas não correspondem, verifique-as", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             MySqlConnection Conexao = null;
             try
             {
-                string data_source = "datasource=localhost; username=root; database=reservas_labs";
+                string data_source = "datasource=localhost; username=root; database=reserva_labs";
                 Conexao = new MySqlConnection(data_source);
 
                 string sql = "SELECT * from login WHERE email = @email AND senha = @senha;";
