@@ -53,7 +53,7 @@ namespace IdeiaProj1
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    Tela2 tela2 = new Tela2();
+                    Tela2 tela2 = new Tela2(txtemail.Text);
                     this.Hide();
                     tela2.ShowDialog();
                     this.Dispose();

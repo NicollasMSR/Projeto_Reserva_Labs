@@ -93,7 +93,7 @@ namespace IdeiaProj1
                 string data_source = "datasource=localhost; username=root; database=reservas_labs";
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "SELECT * from reserva WHERE horario_incial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
+                string sql = "SELECT * from reserva WHERE horario_inicial = @horarioInicial AND horario_final = @horarioFinal AND data_reserva = @dataReserva;";
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
                 comando.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
                 comando.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
@@ -115,13 +115,14 @@ namespace IdeiaProj1
                     {
                         Conexao = new MySqlConnection(data_source);
 
-                        string sqlinsert = "INSERT INTO reserva(local_reserva, data_reserva, dia_semana, horario_incial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@localReserva, @dataReserva, @diaSemana, @horarioIncial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
+                        string sqlinsert = "INSERT INTO reserva(id, local_reserva, data_reserva, dia_semana, horario_inicial, horario_final, curso, ano, prof_resp, reserva_fixa)" + "VALUES(@id, @localReserva, @dataReserva, @diaSemana, @horarioInicial, @horarioFinal, @curso, @ano, @profResp, @reservaFixa);";
 
                         MySqlCommand comandoinsert = new MySqlCommand(sqlinsert, Conexao);
+                        comandoinsert.Parameters.AddWithValue("@id", txtid.Text);
                         comandoinsert.Parameters.AddWithValue("@localReserva", txtlocal.Text);
                         comandoinsert.Parameters.AddWithValue("@dataReserva", txtdata.Text);
                         comandoinsert.Parameters.AddWithValue("@diaSemana", txtSemana.Text);
-                        comandoinsert.Parameters.AddWithValue("@horarioIncial", txthora1.Text);
+                        comandoinsert.Parameters.AddWithValue("@horarioInicial", txthora1.Text);
                         comandoinsert.Parameters.AddWithValue("@horarioFinal", txthora2.Text);
                         comandoinsert.Parameters.AddWithValue("@curso", txtcurso.Text);
                         comandoinsert.Parameters.AddWithValue("@ano", txtano.Text);
@@ -142,6 +143,10 @@ namespace IdeiaProj1
                         if (Conexao.State == ConnectionState.Open)
                         {
                             Conexao.Close();
+                            Tela2 tela2 = new Tela2();
+            this.Hide();
+            tela2.ShowDialog();
+            this.Dispose();
                         }
                     }
 

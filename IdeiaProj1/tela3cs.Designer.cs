@@ -54,6 +54,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSemana = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -387,12 +389,33 @@
             this.txtSemana.Size = new System.Drawing.Size(164, 24);
             this.txtSemana.TabIndex = 28;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(429, 134);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 24);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "ID:";
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(472, 137);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(120, 20);
+            this.txtid.TabIndex = 30;
+            // 
             // tela3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1275, 729);
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSemana);
             this.Controls.Add(this.label13);
@@ -459,5 +482,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox txtSemana;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtid;
     }
 }

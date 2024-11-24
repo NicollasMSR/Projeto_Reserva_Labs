@@ -14,6 +14,9 @@ namespace IdeiaProj1
 {
     public partial class Tela2 : Form
     {
+        public string EmailProf { get; set; }   
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -244,7 +247,29 @@ namespace IdeiaProj1
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+        public Tela2 (string emailProf)
+        {
+            InitializeComponent();
+            
+            EmailProf = emailProf; 
 
-       
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Excluir excluir = new Excluir(EmailProf);
+            this.Hide();
+            excluir.ShowDialog();
+            this.Dispose();
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Editar editar = new Editar();
+            this.Hide();
+            editar.ShowDialog();
+            this.Dispose();
+        }
     }
 }

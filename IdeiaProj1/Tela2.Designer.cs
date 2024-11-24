@@ -40,6 +40,8 @@
             this.btnSiberia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAuditorio = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,12 +50,12 @@
             // 
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(9, 87);
+            this.dataGrid.Location = new System.Drawing.Point(37, 89);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 62;
             this.dataGrid.RowTemplate.Height = 28;
-            this.dataGrid.Size = new System.Drawing.Size(1256, 439);
+            this.dataGrid.Size = new System.Drawing.Size(1206, 439);
             this.dataGrid.TabIndex = 0;
             // 
             // btnadd
@@ -63,7 +65,7 @@
             this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnadd.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.btnadd.Location = new System.Drawing.Point(8, 573);
+            this.btnadd.Location = new System.Drawing.Point(37, 571);
             this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(124, 25);
@@ -210,12 +212,34 @@
             this.btnAuditorio.UseVisualStyleBackColor = false;
             this.btnAuditorio.Click += new System.EventHandler(this.btnAuditorio_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(186, 571);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(100, 25);
+            this.btnExcluir.TabIndex = 13;
+            this.btnExcluir.Text = "Excluir Reserva";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(304, 571);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(96, 24);
+            this.btnEditar.TabIndex = 14;
+            this.btnEditar.Text = "Editar Reserva";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // Tela2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1275, 729);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAuditorio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSiberia);
@@ -254,5 +278,7 @@
         private System.Windows.Forms.Button btnSiberia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAuditorio;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
