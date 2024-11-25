@@ -49,7 +49,7 @@
             // dataGrid
             // 
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGrid.Location = new System.Drawing.Point(113, 89);
+            this.dataGrid.Location = new System.Drawing.Point(105, 89);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 62;
@@ -64,7 +64,7 @@
             this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnadd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.Color.Black;
-            this.btnadd.Location = new System.Drawing.Point(113, 563);
+            this.btnadd.Location = new System.Drawing.Point(105, 563);
             this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(124, 25);
@@ -104,7 +104,7 @@
             this.btnLab1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLab1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLab1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLab1.Location = new System.Drawing.Point(212, 667);
+            this.btnLab1.Location = new System.Drawing.Point(232, 667);
             this.btnLab1.Name = "btnLab1";
             this.btnLab1.Size = new System.Drawing.Size(124, 25);
             this.btnLab1.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.btnLab2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLab2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLab2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLab2.Location = new System.Drawing.Point(363, 667);
+            this.btnLab2.Location = new System.Drawing.Point(379, 667);
             this.btnLab2.Name = "btnLab2";
             this.btnLab2.Size = new System.Drawing.Size(124, 25);
             this.btnLab2.TabIndex = 6;
@@ -134,7 +134,7 @@
             this.btnLab3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLab3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLab3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLab3.Location = new System.Drawing.Point(514, 667);
+            this.btnLab3.Location = new System.Drawing.Point(526, 667);
             this.btnLab3.Name = "btnLab3";
             this.btnLab3.Size = new System.Drawing.Size(124, 25);
             this.btnLab3.TabIndex = 7;
@@ -149,7 +149,7 @@
             this.btnLabquimica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLabquimica.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLabquimica.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLabquimica.Location = new System.Drawing.Point(665, 667);
+            this.btnLabquimica.Location = new System.Drawing.Point(673, 667);
             this.btnLabquimica.Name = "btnLabquimica";
             this.btnLabquimica.Size = new System.Drawing.Size(124, 25);
             this.btnLabquimica.TabIndex = 8;
@@ -164,7 +164,7 @@
             this.btnSalamaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalamaker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalamaker.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSalamaker.Location = new System.Drawing.Point(816, 667);
+            this.btnSalamaker.Location = new System.Drawing.Point(820, 667);
             this.btnSalamaker.Name = "btnSalamaker";
             this.btnSalamaker.Size = new System.Drawing.Size(124, 25);
             this.btnSalamaker.TabIndex = 9;
@@ -204,7 +204,7 @@
             this.btnAuditorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAuditorio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuditorio.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAuditorio.Location = new System.Drawing.Point(1118, 667);
+            this.btnAuditorio.Location = new System.Drawing.Point(1114, 667);
             this.btnAuditorio.Name = "btnAuditorio";
             this.btnAuditorio.Size = new System.Drawing.Size(124, 25);
             this.btnAuditorio.TabIndex = 12;
@@ -219,7 +219,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(286, 563);
+            this.btnExcluir.Location = new System.Drawing.Point(278, 563);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(124, 25);
             this.btnExcluir.TabIndex = 13;
@@ -234,7 +234,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(459, 563);
+            this.btnEditar.Location = new System.Drawing.Point(451, 563);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(124, 25);
             this.btnEditar.TabIndex = 14;
