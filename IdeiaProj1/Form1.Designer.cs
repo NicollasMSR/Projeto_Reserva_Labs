@@ -43,7 +43,7 @@
             // txtemail
             // 
             this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(593, 326);
+            this.txtemail.Location = new System.Drawing.Point(591, 326);
             this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(187, 26);
@@ -52,7 +52,7 @@
             // txtsenha
             // 
             this.txtsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsenha.Location = new System.Drawing.Point(593, 393);
+            this.txtsenha.Location = new System.Drawing.Point(591, 393);
             this.txtsenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(187, 26);
@@ -64,7 +64,7 @@
             this.lblsenha.BackColor = System.Drawing.Color.Transparent;
             this.lblsenha.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lblsenha.Location = new System.Drawing.Point(511, 396);
+            this.lblsenha.Location = new System.Drawing.Point(509, 396);
             this.lblsenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsenha.Name = "lblsenha";
             this.lblsenha.Size = new System.Drawing.Size(69, 22);
@@ -77,7 +77,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(518, 329);
+            this.label3.Location = new System.Drawing.Point(516, 329);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 22);
@@ -91,10 +91,10 @@
             this.btnentrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnentrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnentrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnentrar.Location = new System.Drawing.Point(684, 524);
+            this.btnentrar.Location = new System.Drawing.Point(679, 525);
             this.btnentrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnentrar.Name = "btnentrar";
-            this.btnentrar.Size = new System.Drawing.Size(63, 26);
+            this.btnentrar.Size = new System.Drawing.Size(99, 26);
             this.btnentrar.TabIndex = 7;
             this.btnentrar.Text = "Entrar";
             this.btnentrar.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.lbltituloform.AutoSize = true;
             this.lbltituloform.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltituloform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbltituloform.Location = new System.Drawing.Point(544, 259);
+            this.lbltituloform.Location = new System.Drawing.Point(548, 259);
             this.lbltituloform.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltituloform.Name = "lbltituloform";
             this.lbltituloform.Size = new System.Drawing.Size(203, 32);
@@ -119,7 +119,7 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastro.Location = new System.Drawing.Point(541, 524);
+            this.btnCadastro.Location = new System.Drawing.Point(513, 525);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(99, 26);

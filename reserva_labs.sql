@@ -19,8 +19,9 @@ SET time_zone = "+00:00";
 
 --
 -- Banco de dados: `reserva_labs`
---
+CREATE database reserva_labs;
 
+use reserva_labs;
 -- --------------------------------------------------------
 
 --
